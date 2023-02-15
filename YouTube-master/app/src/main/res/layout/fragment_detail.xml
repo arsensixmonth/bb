@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context=".ui.detail.DetailFragment">
+    
+
+    <ProgressBar
+        android:id="@+id/progresBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/grey"
+        android:padding="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:text="Emotional Well-being  Healing Practices for Children"
+            android:textColor="@color/black"
+            android:textFontWeight="400"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:targetApi="p" />
+
+        <TextView
+            android:id="@+id/description2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:scrollbarAlwaysDrawVerticalTrack="true"
+            android:text="In this series, we break down the impact of displacement, instability, violence, and trauma in children, and offer exercises to support children in their healing journey. "
+            android:textColor="@color/black"
+            android:textFontWeight="400"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/description"
+            app:layout_goneMarginTop="8dp"
+            tools:targetApi="p" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:src="@drawable/ic_baseline_play_arrow_24"
+        android:backgroundTint="@color/red"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="175dp"/>
+
+    <TextView
+        android:id="@+id/amountOfVideos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="32 video series"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardView"
+        tools:ignore="NotSibling" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="260dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@id/amountOfVideos"
+        tools:listitem="@layout/item_detail" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
